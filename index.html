@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Piano Labs — Juliana Reinat Piano Studio</title>
-  <meta name="description" content="Nueva modalidad grupal de piano. Grupos de máximo 4 alumnos, teclados Yamaha profesionales. Pre-lanzamiento — cupos limitados." />
   
   <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '956622253406152'); fbq('track', 'PageView');</script>
   <noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=956622253406152&ev=PageView&noscript=1"/></noscript>
   <link rel="stylesheet" href="https://use.typekit.net/yza0lrf.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  
   <style>
     :root {
       --gold:#AF9575;--gold-light:#C9B49D;--gold-pale:#E5D9CF;
@@ -21,8 +21,8 @@
     body{font-family:'Nunito Sans',sans-serif;font-weight:300;background:var(--dark-2);color:var(--cream);overflow-x:hidden;}
 
     nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 56px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(17,17,17,0.97) 60%,transparent);}
-    .nav-brand{font-family:gelica,serif;font-size:13px;letter-spacing:.18em;color:var(--gold-light);text-transform:uppercase;}
-    .nav-cta{background:var(--gold);color:var(--dark);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:12px 28px;border-radius:6px;transition:all .3s;}
+    .nav-brand img{height:45px;width:auto;display:block;}
+    .nav-cta{background:var(--gold);color:var(--dark);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:12px 28px;border-radius:6px;transition:0.3s;}
     .nav-cta:hover{background:var(--gold-light);transform:translateY(-1px);}
 
     .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;}
@@ -31,62 +31,49 @@
     .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(175,149,117,.13);border:1px solid rgba(175,149,117,.35);color:var(--gold);font-size:10px;letter-spacing:.25em;text-transform:uppercase;padding:8px 18px;border-radius:100px;margin-bottom:36px;animation:fadeUp .7s ease both;}
     .badge-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;animation:blink 2s ease infinite;}
     @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    
     .hero h1{font-family:gelica,serif;font-size:clamp(52px,7vw,88px);font-weight:400;line-height:1;letter-spacing:-.02em;color:var(--cream);animation:fadeUp .7s .1s ease both;}
     .hero h1 em{font-style:italic;color:var(--gold);}
     .hero-desc{font-size:16px;line-height:1.85;color:var(--gold-pale);margin-top:24px;max-width:460px;}
-    
-    .hero-stats{display:flex;gap:40px;margin-top:48px;}
-    .stat{padding-left:16px;border-left:1px solid rgba(175,149,117,.35);}
-    .stat-n{font-family:gelica,serif;font-size:34px;color:var(--gold);line-height:1;}
-    .stat-l{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px;}
 
-    .urgency{background:var(--gold);padding:20px 56px;display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap;}
+    .urgency{background:var(--gold);padding:20px 56px;display:flex;justify-content:center;align-items:center;gap:20px;}
     .urgency p{font-family:gelica,serif;font-size:22px;color:var(--dark);text-align:center;}
-    .urgency-pill{background:var(--dark);color:var(--gold);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:8px 16px;border-radius:100px;}
 
     section{padding:96px 72px;}
-    .s-dark{background:var(--dark);}
-    .s-cream{background:var(--cream-2);}
     .s-darker{background:var(--dark-2);}
-    h2{font-family:gelica,serif;font-size:clamp(32px,4.5vw,56px);font-weight:400;}
-    h2 em{font-style:italic;color:var(--gold);}
 
-    .price-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:56px;}
-    .pc{background:var(--dark-card);border:1px solid rgba(175,149,117,0.15);padding:40px;border-radius:var(--radius);transition:0.3s;}
-    .pc:hover{border-color:var(--gold);transform:translateY(-5px);}
-    .pc-price{font-family:gelica,serif;font-size:48px;color:var(--cream);}
-
-    .form-wrap{background:var(--dark);border-radius:var(--radius);padding:48px;max-width:650px;margin:0 auto;}
+    .form-wrap{background:var(--dark);border-radius:var(--radius);padding:48px;max-width:650px;margin:0 auto;border:1px solid rgba(175,149,117,0.1);}
     .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
     .field{display:flex;flex-direction:column;margin-bottom:16px;}
     .field.full{grid-column:1/-1;}
-    .field label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+    .field label{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
     .field input, .field select, .field textarea {
-      background:rgba(255,255,255,0.03);border:1px solid rgba(175,149,117,0.2);padding:14px;color:white;border-radius:6px;outline:none;
+      background:rgba(255,255,255,0.03);border:1px solid rgba(175,149,117,0.2);padding:14px;color:white;border-radius:6px;outline:none;font-family:inherit;
     }
     .field textarea { min-height: 80px; resize: vertical; }
-    
+    .field input:focus, .field select:focus, .field textarea:focus { border-color:var(--gold); }
+
     .check-block{grid-column:1/-1;background:rgba(175,149,117,0.05);padding:20px;border-radius:8px;border:1px solid rgba(175,149,117,0.1);margin-bottom:16px;}
     .check-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;}
     .ci{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gold-pale);cursor:pointer;}
 
-    .form-submit{grid-column:1/-1;background:var(--gold);color:var(--dark);padding:20px;border:none;border-radius:6px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;cursor:pointer;transition:0.3s;}
+    .form-submit{grid-column:1/-1;background:var(--gold);color:var(--dark);padding:20px;border:none;border-radius:6px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;cursor:pointer;transition:0.3s;font-family:inherit;}
     .form-submit:hover{background:var(--gold-light);box-shadow:0 8px 24px rgba(175,149,117,0.3);}
 
-    footer{padding:48px;text-align:center;border-top:1px solid rgba(175,149,117,0.1);}
-    #success{display:none;text-align:center;padding:40px;}
+    footer{padding:48px;text-align:center;background:var(--dark-2);border-top:1px solid rgba(175,149,117,0.1);}
+    #success{display:none;text-align:center;padding:20px;}
 
     @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-    @media(max-width:768px){ .form-grid, .price-cards{grid-template-columns:1fr;} section{padding:72px 24px;} }
+    @media(max-width:768px){ .form-grid{grid-template-columns:1fr;} section{padding:72px 24px;} nav{padding:20px 24px;} }
   </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-brand">
-    <img src="JulianaReinat-LogoBlanco-SinFondo.png" alt="Juliana Reinat" style="height: 40px;">
+    <img src="JulianaReinat-LogoBlanco-SinFondo.png" alt="Juliana Reinat Piano Studio">
   </div>
-  <a href="#lista" class="nav-cta">Reservar lugar</a>
+  <a href="#lista" class="nav-cta">Reservar</a>
 </nav>
 
 <section class="hero">
@@ -94,16 +81,12 @@
   <div class="hero-inner">
     <div class="badge"><span class="badge-dot"></span>Pre-lanzamiento · Cupos limitados</div>
     <h1>Piano <em>Labs</em></h1>
-    <p class="hero-desc">Una nueva forma de vivir el piano. Grupos exclusivos de máximo 4 alumnos, teclados Yamaha profesionales y excelencia académica.</p>
-    <div class="hero-stats">
-      <div class="stat"><div class="stat-n">4</div><div class="stat-l">Alumnos máx.</div></div>
-      <div class="stat"><div class="stat-n">8</div><div class="stat-l">Cupos PROMO</div></div>
-    </div>
+    <p class="hero-desc">Grupos exclusivos de máximo 4 alumnos, teclados Yamaha profesionales y la excelencia de Juliana Reinat Piano Studio.</p>
   </div>
 </section>
 
 <div class="urgency">
-  <p>Los primeros <em>8 cupos</em> tienen matrícula GRATIS</p>
+  <p>Matrícula <em>GRATIS</em> para los primeros 8 cupos</p>
 </div>
 
 <section class="s-darker" id="lista">
@@ -112,31 +95,31 @@
       <div class="form-grid">
         <div class="field">
           <label>Tu nombre completo</label>
-          <input type="text" name="Nombre_Acudiente" placeholder="Acudiente" required />
+          <input type="text" name="Nombre_Acudiente" placeholder="Nombre del padre/madre" required />
         </div>
         <div class="field">
           <label>Tu WhatsApp</label>
-          <input type="tel" name="WhatsApp" placeholder="+57..." required />
+          <input type="tel" name="WhatsApp" placeholder="+57 300 000 0000" required />
         </div>
         <div class="field">
           <label>Nombre del estudiante</label>
-          <input type="text" name="Nombre_Estudiante" placeholder="Hijo/a" required />
+          <input type="text" name="Nombre_Estudiante" placeholder="Nombre del niño/a" required />
         </div>
         <div class="field">
           <label>Edad del estudiante</label>
-          <input type="number" name="Edad" placeholder="Edad" min="6" max="17" required />
+          <input type="number" name="Edad_Estudiante" placeholder="Años (mín. 6)" min="6" max="17" required />
         </div>
         <div class="field full">
           <label>¿Cuántas veces por semana?</label>
           <select name="Plan_Interes" required>
-            <option value="" disabled selected>Selecciona...</option>
-            <option value="1 vez por semana">1 vez por semana ($900k)</option>
-            <option value="2 veces por semana">2 veces por semana ($1.7M)</option>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="1 vez por semana">1 vez por semana — $900.000 / trimestre</option>
+            <option value="2 veces por semana">2 veces por semana — $1.700.000 / trimestre</option>
           </select>
         </div>
 
         <div class="check-block">
-          <label style="font-size:9px; letter-spacing:.2em; color:var(--gold);">Días de Interés</label>
+          <label style="font-size:9px; letter-spacing:.22em; color:var(--gold); text-transform:uppercase;">Días de interés</label>
           <div class="check-row">
             <label class="ci"><input type="checkbox" name="Dia" value="Lunes"> Lunes</label>
             <label class="ci"><input type="checkbox" name="Dia" value="Martes"> Martes</label>
@@ -148,52 +131,58 @@
         </div>
 
         <div class="field full">
-          <label>Notas o comentarios</label>
-          <textarea name="Notas" placeholder="Escribe aquí..."></textarea>
+          <label>Notas o comentarios adicionales</label>
+          <textarea name="Notas" placeholder="Alguna pregunta o detalle adicional..."></textarea>
         </div>
 
         <button type="submit" class="form-submit">Inscribirme y contactar por WhatsApp ✦</button>
       </div>
     </form>
-    
+
     <div id="success">
-      <h3 style="color:var(--gold); font-size:24px;">¡Lugar Reservado!</h3>
-      <p style="margin-top:10px;">Abriendo WhatsApp para confirmar...</p>
+      <h3 style="font-family:gelica; color:var(--gold); font-size:32px;">¡Lugar Reservado!</h3>
+      <p style="margin-top:15px; color:var(--gold-pale);">Estamos abriendo WhatsApp para confirmar tu inscripción...</p>
     </div>
   </div>
 </section>
 
 <footer>
-  <img src="JulianaReinat-LogoBlanco-SinFondo.png" style="height:30px; opacity:0.5;">
+  <img src="JulianaReinat-LogoBlanco-SinFondo.png" style="height:35px; opacity:0.5;" alt="Juliana Reinat">
 </footer>
 
 <script>
   document.getElementById('waitlist-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = this.querySelector('.form-submit');
-    btn.innerText = "Enviando...";
+    const originalBtnText = btn.innerText;
+    btn.innerText = "Procesando...";
     btn.disabled = true;
 
     const formData = new FormData(this);
     const dias = Array.from(this.querySelectorAll('input[name="Dia"]:checked')).map(el => el.value).join(', ');
 
-    const response = await fetch(this.action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    });
+    try {
+      const response = await fetch(this.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
 
-    if (response.ok) {
+      if (response.ok) {
         const acudiente = formData.get('Nombre_Acudiente');
         const estudiante = formData.get('Nombre_Estudiante');
-        const edad = formData.get('Edad');
+        const edad = formData.get('Edad_Estudiante'); // Verificado
         const plan = formData.get('Plan_Interes');
         const notas = formData.get('Notas');
         
-        let textoWapp = `Hola! 👋 Acabo de inscribirme a *Piano Labs*.%0A%0A`;
-        textoWapp += `*Acudiente:* ${acudiente}%0A*Estudiante:* ${estudiante}%0A*Edad:* ${edad} años%0A*Plan:* ${plan}%0A`;
-        if(dias) textoWapp += `*Días:* ${dias}%0A`;
-        if(notas) textoWapp += `*Notas:* ${notas}%0A`;
+        let textoWapp = `Hola! 👋 Acabo de inscribirme a la lista de espera de *Piano Labs*.%0A%0A`;
+        textoWapp += `*Acudiente:* ${acudiente}%0A`;
+        textoWapp += `*Estudiante:* ${estudiante}%0A`;
+        textoWapp += `*Edad:* ${edad} años%0A`; // Aquí estaba el detalle
+        textoWapp += `*Plan:* ${plan}%0A`;
+        if(dias) textoWapp += `*Días interés:* ${dias}%0A`;
+        if(notas) textoWapp += `*Notas:* ${notas}%0A%0A`;
+        textoWapp += `Quisiera confirmar mi lugar para los cupos de matrícula gratis.`;
 
         this.style.display = 'none';
         document.getElementById('success').style.display = 'block';
@@ -201,6 +190,15 @@
         setTimeout(() => {
           window.location.href = `https://wa.me/573053015119?text=${textoWapp}`;
         }, 1500);
+      } else {
+        alert("Hubo un error. Por favor intenta de nuevo.");
+        btn.innerText = originalBtnText;
+        btn.disabled = false;
+      }
+    } catch (error) {
+      alert("Error de conexión.");
+      btn.innerText = originalBtnText;
+      btn.disabled = false;
     }
   });
 </script>
